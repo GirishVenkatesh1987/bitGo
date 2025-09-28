@@ -4,6 +4,7 @@ import base.Hooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,7 +24,9 @@ public class SampleTest extends Hooks {
     public void firstTest() throws IOException {
 
         WebElement element = driver.findElement(By.cssSelector("h3"));
-        System.out.println(element.getText().trim());
+        String actualTransactuionText = element.getText().trim();
+        Assert.assertEquals("25 of 2875 Transactions",actualTransactuionText );
+
 
     }
 
