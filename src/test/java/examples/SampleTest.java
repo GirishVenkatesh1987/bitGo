@@ -25,7 +25,7 @@ public class SampleTest extends Hooks {
 
         WebElement element = driver.findElement(By.cssSelector("h3"));
         String actualTransactuionText = element.getText().trim();
-        Assert.assertEquals("25 of 2875 Transactions",actualTransactuionText );
+        Assert.assertEquals(actualTransactuionText, "25 of 2875 Transactions");
 
 
     }
